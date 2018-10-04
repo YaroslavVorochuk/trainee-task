@@ -1,5 +1,8 @@
 <div class="map">
   <agm-map [latitude] = "latitude" [longitude] = "longitude" (mapClick)='onMapMarker($event)'>
-
+    <agm-marker 
+    [latitude] = "latitude" 
+    [longitude] = "longitude"
+    *ngIf = 'locationChosen'></agm-marker>
   </agm-map>
 </div>

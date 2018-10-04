@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class MapComponent implements OnInit {
   latitude = 49.85;
   longitude = 24.0166666667;
+  locationChosen = false;
 
   onMapMarker(event) {
-    console.log(event);
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng;
+    this.locationChosen = true;
   }
   constructor() { }
 
